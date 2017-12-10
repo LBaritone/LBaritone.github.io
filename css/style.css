@@ -162,6 +162,10 @@ iframe {
     color: #DF4515;
 }
 
+#vis2_title {
+    font-size: 2em;
+}
+
 #vis2can {
     width: 130px;
     margin-left: -1.4em;

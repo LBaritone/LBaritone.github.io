@@ -51,25 +51,30 @@ $(window).on("scroll.scroll1", function () {
 	console.log("bottom: " + target_bottom);
 
 	if(window_middle > target_top && window_middle < target_bottom) {
+		$('#vis2_title').fadeOut(2000);
+		setTimeout(function () { 
+			$('#vis2_title').remove();
+		}, 2000);
+
 		setTimeout(function () { 
 			$('#gun_text').css('visibility', 'visible').hide().fadeIn(2000);
 			$('#vis2gun').css('visibility', 'visible').hide().fadeIn(3000);
 			append_gun_icons(13);
-		}, 400);
+		}, 2000);
 
 		setTimeout(function () { 
 			$('#car_text').css('visibility', 'visible').hide().fadeIn(2000);
 			$('#vis2car_icon').css('visibility', 'visible').hide().fadeIn(3000);
 			$('#car_row').css('background-color', '#464a4d').hide().fadeIn(1000);	
 			append_car_icons(38);
-		}, 2000);
+		}, 3600);
 
 		setTimeout(function () { 
 			$('#drug_text').css('visibility', 'visible').hide().fadeIn(2000);
 			$('#vis2can').css('visibility', 'visible').hide().fadeIn(3000);
 			$('#drug_row').css('background-color', '#3d4143').hide().fadeIn(1000);
 			append_drug_icons(52);
-		}, 4600);
+		}, 6200);
 
 		$(this).off('scroll.scroll1'); 
 	}
