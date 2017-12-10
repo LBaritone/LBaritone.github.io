@@ -1,0 +1,14 @@
+.vis2_overlay_button:hover{
+    color:#cf8308;
+    fill:#c83e12;
+    cursor: pointer;
+}
+
+#vis2_svg2_text{
+    cursor: pointer;
+
+}
+
+#vis2_overlay_button_text{
+    cursor: pointer;
+}

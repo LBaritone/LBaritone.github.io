@@ -201,7 +201,9 @@ iframe {
 }
 
 .big_row {
-    margin-top: 27%;
+    margin-top: 22vh;
+/*    position: absolute;
+    top: 50%;*/
 }
 
 #vis2gun {
@@ -390,13 +392,6 @@ a:hover {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
-#moveDown {
-    z-index: 5;
-}
-
-
-
 
 
 @font-face {

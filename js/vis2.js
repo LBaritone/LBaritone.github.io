@@ -33,3 +33,9 @@
 
 
 // $('#vis2drugs').appendChild('<i class="fa fa-trash-o" aria-hidden="true"></i>');
+
+
+
+
+
+
