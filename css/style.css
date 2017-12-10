@@ -121,11 +121,13 @@ iframe {
 }
 
 #vis3text {
-    height: 3em;
+    height: 1em;
+    padding-bottom: 4vh;
 }
 
 #vis3 {
-    margin-top: 2.4em;
+    /*margin-top: 2.4em;*/
+    margin-top: 3vh;
 }
 
 .title {
@@ -147,7 +149,9 @@ iframe {
 }
 
 #vis3title {
-    padding-bottom: 1em;
+    /*padding-bottom: 1em;*/
+    padding-top: 10vh;
+    padding-bottom: 3.3vh;
 }
 
 .lined {
