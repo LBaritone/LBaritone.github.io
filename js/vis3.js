@@ -4,7 +4,7 @@ var chart = document.getElementById("vis3");
 // SVG margin convention
 var vis3_margin = {top: 40, right: 50, bottom: 60, left: 75},
             vis3_width = (chart.clientWidth * (5.0/6.0)) - vis3_margin.left - vis3_margin.right,
-            vis3_height = 500 - vis3_margin.top - vis3_margin.bottom;
+            vis3_height = ($(window).height() * (3.3/5.0)) - vis3_margin.top - vis3_margin.bottom;
 
 // make a new svg drawing area
 var vis3_graph = d3.select("#vis3").append("svg")
@@ -605,7 +605,7 @@ function updateLine (cat){
 
         // append conjoining text to visualization with facts pertaining
         // to the current category
-        d3.select(".dynamic_text")
+        d3.selectAll(".dynamic_text")
             .transition()
                 .style("opacity", 0)
                 .delay(500)
