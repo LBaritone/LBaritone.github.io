@@ -1,1 +1,342 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Opioid Crisis</title>
+
+    <!-- REFERENCES TO CSS STYLE SHEETS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vis1.css">
+    <link rel="stylesheet" href="css/vis3.css">
+    <link rel="stylesheet" href="css/vis4.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+</head>
+<body>
+    <div class="container-fluid" id="fullpage">
+        <div class = "section video_section">
+            <div class = "row">
+                <h1 align="center">A World-wide Problem</h1>
+                <!--6:45-->
+            </div>
+            <div class = "row">
+                <div class = "col-md-12" align = "center">
+<!--                      <iframe width="1000" height="562" id="playerid"
+                        src="https://www.youtube.com/embed/UmDr_Vquc6A?start=404&autoplay=1"
+                        frameborder="0" allowfullscreen></iframe> -->
+                     <iframe id="ytplayer" width="1000" height="562" id="playerid"
+                        src="https://www.youtube.com/embed/UmDr_Vquc6A?&start=404&end=477&autoplay=0&events={onStateChange:onPlayerStateChange}&enablejsapi=1"
+                        frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
+                        <!-- <div id="player"></div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="section vis1_section">
+            <!--Pill Container Visualization-->
+            <div class = "row spaced_up_vis1">
+                <h2 align = "center">How Much Of the World's Opioid's are Consumed by the US?</h2>
+            </div>
+            <div class = "row">
+                <div class="col-md-1"></div>
+                <div class="col-md-7">
+                    <h3 align = "center" > Top 10 Consumers of the Global Opioid Supply (Each Pill Represents 500kg)</h3>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <button align ="center" class="button" type="button" onclick="vis1_GO()"><span>See Consumption</span></button>
+                </div>
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12" align="center">
+                    <div id="vis1"></div>
+                    <form class="vis1_form">
+                        Data Year:
+                        <input type="number" id="vis1_singleYear" min="1980" max="2015" value="2015">
+                        &nbsp&nbsp&nbsp&nbsp&nbspSubstances:&nbsp&nbsp
+                        <input type="checkbox" id="vis1_methadone" value="methadone" checked> <span id="vis1_methadone_text"> Methadone &nbsp&nbsp </span>
+                        <input type="checkbox" id="vis1_morphine" value="morphine" checked> <span id="vis1_morphine_text">Morphine &nbsp&nbsp </span>
+                        <input type="checkbox" id="vis1_pethidine" value="pethidine" checked> <span id="vis1_pethidine_text">Pethidine &nbsp&nbsp </span>
+                        <input type="checkbox" id="vis1_oxycodone" value="oxycodone" checked> <span id="vis1_oxycodone_text">Oxycodone &nbsp&nbsp </span>
+                        <input type="checkbox" id="vis1_fentanyl" value="fentanyl" checked> <span id="vis1_fentanyl_text">Fentanyl &nbsp&nbsp </span>
+                        <input type="checkbox" id="vis1_hydromorphone" value="hydromorphone" checked> <span id="vis1_hydromorphone_text">Hydromorphone </span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--GUNS, CARS, DRUGS, AND PEOPLE VISUALIZATION -->
+        <div class="section vis2_section">
+            <div class="row">
+                <div class="col-md-5" style="height:100vh;">
+                    <div class="row" style="height:40%;">
+                        <div class="col-md-12">
+                            <div class = "row top_row_gun">
+                                <div id="gun_text" align="center" class="title">Gun homicides killed <span class="lined"> <span class="red">13,000</span> people in 2016 </span></div>
+                            </div>
+
+                            <div class="row row_bellow">
+                                <div class="col-md-3"></div>
+                                <img id= "vis2gun" class="col-md-3" src="img/gun.png" alt="Visualization 1"> 
+                                <div id="gun_icons" class="col-md-4 icons" style="font-size: 0.7em;">
+
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="car_row" class="row" style="height:60%;">
+                        <div class="col-md-12">
+                            <div class = "row top_row_car">
+                                <div id="car_text" align="center" class="title">Car crashes killed <span class="lined"> <span class="red">38,000</span> people in 2016 </span></div>
+                            </div>
+
+                            <div class="row row_bellow">
+                                <div class="col-md-2"></div>
+                                <i id="vis2car_icon" class="fa fa-car col-md-3" aria-hidden="true" style="font-size: 55px;"></i>
+                                <div id="vis2car" class="col-md-5 icons" style="font-size: 0.5em;">
+
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drug_row" class="col-md-7" style="height:100vh">
+                    <div class = "row top_row big_row">
+                        <div id="drug_text" align="center" class="title">Drug overdose is the leading cause of accidental <span class="lined">death in the US, killling <span class="red">52,404</span> people in 2016 </span></div>
+                    </div>
+
+                    <div class="row row_bellow">
+                        <div class="col-md-2"></div>
+                        <img id= "vis2can" class="col-md-4" src="img/pill_can.png" alt="Visualization 1"> 
+                        <div id="vis2drugs" class="col-md-6 icons" >
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section vis3_section">
+            <div class = "row vis3select" align = "center">
+                <h2 id="vis3title" align = "center">And Opioid Deaths Are on the Rise</h2>
+                <div class="row">
+                    <div id = "vis3text" class = "vis3text col-md-6"></div>
+                </div>
+            </div>
+            <div class="row row_no_margin">
+                <div id="select2" class="btn-group vis3_button_group" data-toggle="buttons">
+                    <label class="btn btn-primary active vis3_button">
+                        <input class="button_text" type="radio" name="options" id="option1" value="default" checked> Opioid Deaths
+                    </label>
+                    <label class="btn btn-primary vis3_button">
+                        <input class="button_text" type="radio" name="options" id="option2" value="other">Other Sources
+                    </label>
+                    <label class="btn btn-primary vis3_button">
+                        <input class="button_text" type="radio" name="options" id="option3" value="Sex">Gender
+                    </label>
+                    <label class="btn btn-primary vis3_button">
+                        <input class="button_text" type="radio" name="options" id="option4" value="Race">Race
+                    </label>
+                    <label class="btn btn-primary vis3_button">
+                        <input class="button_text" type="radio" name="options" id="option5" value="Age">Age
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div id = "vis3" class = "col-md-12"></div>
+                <!-- <div id = "vis3" class = "col-md-6"></div> -->
+                <!-- <div id = "vis3text" class = "vis3text col-md-6"></div> -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h5 align="center">Death in Your Community</h5> 
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-3">
+                    <div class="form-group input" align="center">
+                        <label for="zip_input">Enter Your Zip Code</label>
+                        <input type="text" class="form-control" id="zip_input" value="02138">
+                    </div>
+                </div>
+                <div id="zip_button_case" class="col-md-3">
+                    <button id="zip_button" type="submit" class="btn btn-primary" onclick="vis5_disp()">Submit</button>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div id="vis5" class="col-md-6"></div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
+        <div class="section vis4_section">
+            <!--Choropleth map of Opiod Dealths-->
+            <div class = "row">
+                <h2 id="space_up" align="center">Your County in Context</h2>
+                <h3 id="toggle_text" align="center">Toggle between Deaths and see Death Rate between (1999 and 2015).</h3>
+                <!--Select Box for choosing data-->
+                <div class="row">
+                    <div class="col-md-5"></div>
+                    <div id="select1" class="col-md-2" align="center">
+                        <select class="form-control" id = "dataSelect" onchange="createScalesAndLegend()">
+                            <option value="Deaths">Total Deaths</option>
+                            <option value="Crude Rate">Death Rate</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+
+                <div id = "vis4" align="center"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row">
+                <h2 align = "center">Do Your Part to Save Lives</h2>
+            </div>
+                <div id="auto_expand">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <img id="narcam_img" src="img/narcam.png" alt="Narcam">
+                                <div class="col-md-5">
+                                    <p id="narcam_text"><a href="https://www.narcan.com/">Narcam</a> is the only FDA-approved nasal treatment of opioid overdose</p>
+                                    <p>Narcan reverses the affects of an opioid overdose and saves lives. Currently one use of Narcan costs 140$.</p>
+                                    <p>Petition your <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">senator</a> to bring the price down.</p>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>                    
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5 spaced_right">
+                                    <p id="narcam_text"><a href="https://rizema.org/">Rize</a> is a new nonprofit in Massachusetts hoping to raise $50 million over the next three years to battle opioid addiction in Boston.</p>
+                                    <p>Join their mailing list <a href="https://rizema.org/email-signup/">here</a> or <a href="https://rizema.org/support/">donate</a>.</p>
+                                    
+                                </div>
+                                <div class="col-md-3">
+                                    <img id="narcam_img" src="img/rize.png" alt="Rize">
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-3">
+                                    <img id="narcam_img" src="img/needle.png" alt="Rize">
+                                </div>
+                                <div class="col-md-5">
+                                    <p id="narcam_text"><a href="http://www.wbur.org/commonhealth/2017/11/14/needles-near-boston-schools">Discarded Needles</a> pose a health threat especially toward young children and pets.</p>
+                                    <p>There are only <a href="http://www.bphc.org/whatwedo/Recovery-Services/services-for-active-users/Pages/Safe-Needle-and-Syringe-Disposal.aspx">9</a> needle disposal stations in Boston, and last year,  more than 20,000 littered needles were collected outside these stations. <a href="https://www.bostonglobe.com/metro/2017/08/16/pharmacies-could-collect-used-needles-under-council-proposal/wOReEj2J3QyS1IEVNFWM4J/story.html">Learn more </a>about the proposal to require pharmacies to open used needle disposal stations.</p>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- Load Pre-Built JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="js/queue.js"></script>
+    <script src="js/d3-legend.min.js"></script>
+    <script src="js/d3-legend.js"></script>
+    <script src="js/topojson.js"></script>
+    <script src="js/colorbrewer2.js"></script>
+    <script src="js/jquery.fullPage.js "></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                menu: '#menu',
+                lockAnchors: false,
+                // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ["Trump's Speech", 'Worldwide Comsumption', 
+                'Deaths in 2016', 'Deaths On the Rise', 'Death in Your Community', 'Map', 'Help'],
+                showActiveTooltip: false,
+                slidesNavigation: false,
+                slidesNavPosition: 'bottom',
+
+                scrollBar:true,
+                // autoScrolling:false
+
+                // automatic scroll 
+                afterRender: function() {
+                    var stop = false;
+                    setTimeout(function(){ stop = true; }, 100000);
+
+                    // of the window is in the first section
+                    var window_top = $(window).scrollTop();
+                    if ((window_top + ($(window).height() / 5) < $(".vis1_section").position().top) && !stop) {
+                        setTimeout(function() {
+                                $('#fullpage').fullpage.moveSectionDown();
+                        }, 76800);
+                    }
+
+                    // // Load the IFrame Player API code asynchronously.
+                    // var tag = document.createElement('script');
+                    // tag.src = "https://www.youtube.com/iframe_api";
+                    // var firstScriptTag = document.getElementsByTagName('script')[0];
+                    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                    // // Replace the 'ytplayer' element with an <iframe> and
+                    // // YouTube player after the API code downloads.
+                    // var player;
+                    // function onYouTubeIframeAPIReady() {
+                    //     player = new YT.Player('ytplayer', {
+                    //         // videoId: 'UmDr_Vquc6A',
+                    //         events: {
+                    //             onReady: onPlayerReady,
+                    //             onStateChange: onPlayerStateChange
+                    //         }
+                    //     });
+                    // }
+                    // // autoplay video
+                    // function onPlayerReady(event) {
+                    //     event.target.playVideo();
+                    // }
+
+                    // // when video ends
+                    // function onPlayerStateChange(event) {   
+                    //     console.log(YT.PlayerState); 
+                    //     if(event.data != YT.PlayerState.PLAYING) {      
+                    //         setTimeout(function() {
+                    //             $('#fullpage').fullpage.moveSectionDown();
+                    //         }, 1000);    
+                    //     }
+                    // }
+
+
+                }
+            });
+        });
+
+    </script>
+
+    <!-- Load Our JS files -->
+    <script src="js/vis2.js"></script>
+    <script src="js/vis1.js"></script>
+    <script src="js/vis4.js"></script>
+    <script src="js/vis3.js"></script>
+    <script src="js/vis5.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
