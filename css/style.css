@@ -163,7 +163,8 @@ iframe {
 }
 
 #vis2_title {
-    font-size: 2em;
+    padding-top: 42vh;
+    font-size: 3em;
 }
 
 #vis2can {
