@@ -1044,6 +1044,7 @@ var vis1_svg2_text = vis1_svg2.append("text")
 function vis1_overlay(){
     // console.log("OVERLAY REMOVED");
     vis1_svg.selectAll(".vis1_overlay").transition().duration(500).attr("opacity", 0);
+    $('#vis1_fade_in').css('visibility', 'visible').hide().fadeIn(500);
     vis1_show_legend();
     vis1_GO();
 }

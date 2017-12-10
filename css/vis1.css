@@ -9,6 +9,10 @@ h9 {
     color:lightgray;
 }
 
+#vis1_fade_in {
+    visibility: hidden;
+}
+
 #vis1_singleYear{
     color:black;
 }
