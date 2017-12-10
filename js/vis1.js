@@ -11,7 +11,7 @@ var vis1_svg = d3.select("#vis1").append("svg")
     .attr("id", "pill_vis")
     .attr("width", vis1_width)
     .attr("height", vis1_height)
-    .style("background-color", "#627671");
+    .style("background-color", "#4f5357");
 
 //------------------------------------------------------
 //         VARIABLES TO ALLOW FOR COLORING
@@ -20,7 +20,7 @@ var vis1_methadone_color = 'white',
     vis1_morphine_color = '#46b8da',
     vis1_pethidine_color = '#FEFE33',
     vis1_oxycodone_color = '#ff33ff',
-    vis1_fentanyl_color = '#FE2712',
+    vis1_fentanyl_color = '#d11717',
     vis1_hydromorphone_color = '#66B032';
 
 //------------------------------------------------------
@@ -68,7 +68,7 @@ var vis1_ground = vis1_svg.append("rect")
     .attr("y", 436)
     .attr("width", 1200)
     .attr("height",64)
-    .style("fill", "#627671");
+    .style("fill", "#4f5357");
 
 var vis1_leg_pills = vis1_svg.selectAll(".vis1_leg_pill")
     .data([vis1_methadone_color,vis1_morphine_color,vis1_pethidine_color,vis1_oxycodone_color, vis1_fentanyl_color, vis1_hydromorphone_color])
@@ -173,7 +173,7 @@ function vis1_close_lid(vis1_lid_specifications){
         .attr("y", 85)
         .attr("width", 22)
         .attr("height", 0)
-        .style("fill", "#627671")
+        .style("fill", "#4f5357")
         .transition()
         .duration(1000)
         .attr("height", 0)
@@ -662,7 +662,7 @@ function vis1_run_AUSTRIA(vis1_austria_SCORE)
 }
 
 function vis1_drop_pills(vis1_data_array) {
-    console.log(vis1_data_array);
+    // console.log(vis1_data_array);
     if (vis1_check_animation_status() === true)
     {
         vis1_open_pill_bottle_lids();
@@ -678,7 +678,7 @@ function vis1_drop_pills(vis1_data_array) {
         vis1_BELGIUM(vis1_allocate_pills(vis1_data_array[8]));
         vis1_AUSTRIA(vis1_allocate_pills(vis1_data_array[9]));
     }else{
-        console.log("Animation in process");
+        // console.log("Animation in process");
     }
 }
 
@@ -777,7 +777,7 @@ function vis1_data_loaded(error, vis1_data){
 }
 
 function vis1_initiate_program(){
-    console.log(vis1_ALL_DATA);
+    // console.log(vis1_ALL_DATA);
     vis1_LOADED = true;
 }
 
@@ -798,6 +798,10 @@ function vis1_GO() {
         var vis1_OXYCODONE = document.getElementById("vis1_oxycodone").checked;
         var vis1_FENTANYL = document.getElementById("vis1_fentanyl").checked;
         var vis1_HYDROMORPHONE = document.getElementById("vis1_hydromorphone").checked;
+
+        if (vis1_METHADONE === false && vis1_MORPHINE === false && vis1_PETHIDINE === false && vis1_OXYCODONE === false && vis1_FENTANYL === false && vis1_HYDROMORPHONE === false){
+            return "None selected";
+        }
 
         // Go through each country, go to that year, and tally the values of those substances
         var vis1_methadone_results = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -875,17 +879,17 @@ function vis1_GO() {
 
         }
 
-        console.log(vis1_total_pills_per_country);
-        console.log(vis1_macro_no_data_tracker);
-        console.log('----------');
-        console.log(vis1_pethidine_results);
+        // console.log(vis1_total_pills_per_country);
+        // console.log(vis1_macro_no_data_tracker);
+        // console.log('----------');
+        // console.log(vis1_pethidine_results);
         vis1_drop_pills(vis1_total_pills_per_country);
     }
 }
 
 function vis1_add_substance(vis1_selected_year, vis1_selected_substance){
 
-    console.log("ADDING: " + vis1_selected_substance + " for the year " + vis1_selected_year);
+    // console.log("ADDING: " + vis1_selected_substance + " for the year " + vis1_selected_year);
 
     var vis1_selected_year_position = vis1_selected_year - 1980;
     var vis1_substance_holder = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -908,7 +912,7 @@ function vis1_add_substance(vis1_selected_year, vis1_selected_substance){
             vis1_substance_holder[i] = 0;
         }
     }
-    console.log([vis1_substance_holder, vis1_micro_no_data_tracker]);
+    // console.log([vis1_substance_holder, vis1_micro_no_data_tracker]);
     return [vis1_substance_holder, vis1_micro_no_data_tracker];
 }
 
@@ -963,16 +967,16 @@ function vis1_allocation_to_benchmarks(vis1_AA){
         vis1_AA[1][0]+vis1_AA[1][1]+vis1_AA[1][2]+vis1_AA[1][3]+vis1_AA[1][4]+vis1_AA[1][5]]
 }
 yikers = [429, [0.28, 0.09, 0, 0.38, 0.19, 0.05]];
-console.log(vis1_allocate_pills(yikers));
-console.log(vis1_allocation_to_benchmarks(vis1_allocate_pills([429, [0.28, 0.09, 0, 0.38, 0.19, 0.05]])));
+// console.log(vis1_allocate_pills(yikers));
+// console.log(vis1_allocation_to_benchmarks(vis1_allocate_pills([429, [0.28, 0.09, 0, 0.38, 0.19, 0.05]])));
 
 
 
 var vis1_label_holder = ["USA", "Germany", "Canada", "UK", "Spain", "France", "Australia", "China", "Belgium", "Austria"];
-console.log(vis1_label_holder[1]);
+// console.log(vis1_label_holder[1]);
 
 for (var i =0; i<vis1_label_holder.length; i++){
-    console.log(vis1_label_holder[i]);
+    // console.log(vis1_label_holder[i]);
     vis1_svg.append("text")
         .attr("x", 60 + 120*i)
         .attr("y", 55)
@@ -980,4 +984,95 @@ for (var i =0; i<vis1_label_holder.length; i++){
         .style("font-size", 12)
         .style("font-weight", "bolder")
         .text(vis1_label_holder[i].toUpperCase());
+}
+
+vis1_svg.append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", 1200)
+    .attr("height", 450)
+    .attr("opacity", 0.95)
+    .attr("class", "vis1_overlay")
+    .style("fill", "#4f5357");
+var vis1_overlay_button = vis1_svg.append("rect")
+    .attr("x", 500)
+    .attr("y", 177)
+    .attr("width", 220)
+    .attr("height", 45)
+    .attr("class", "vis1_overlay vis1_overlay_button")
+    .attr("id", "vis1_overlay_button")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("fill", "darkorange");
+vis1_svg.append("text")
+    .attr("x", 514)
+    .attr("y", 208)
+    .attr("class", "vis1_overlay")
+    .attr("id", "vis1_overlay_button_text")
+    .style("font-family", "Verdana")
+    .style("fill", "white")
+    .style("font-size", 22)
+    .text("See Consumption");
+
+
+document.getElementById("vis1_overlay_button").addEventListener("click", function(){vis1_overlay()});
+var vis1_svg2 = d3.select("#vis1_replay_button").append("svg")
+    .attr("id", "vis1_replay_button")
+    .attr("width", 220)
+    .attr("height", 55);
+
+var vis1_svg2_background = vis1_svg2.append("rect")
+    .attr("x", 35)
+    .attr("y", 10)
+    .attr("width", 100)
+    .attr("height", 35)
+    .attr("id", "vis1_svg2_background")
+    .attr("class", "vis1_overlay_button")
+    .attr("rx", 4)
+    .attr("ry", 4)
+    .attr("fill", "darkorange");
+var vis1_svg2_text = vis1_svg2.append("text")
+    .attr("x", 50)
+    .attr("y", 33)
+    .attr("id", "vis1_svg2_text")
+    .attr("class", "vis1_replay_text")
+    .style("font-family", "Verdana")
+    .style("fill", "white")
+    .style("font-size", 14)
+    .text("Play Again");
+
+function vis1_overlay(){
+    // console.log("OVERLAY REMOVED");
+    vis1_svg.selectAll(".vis1_overlay").transition().duration(500).attr("opacity", 0);
+    vis1_show_legend();
+    vis1_GO();
+}
+
+document.getElementById("vis1_svg2_background").addEventListener("click", function(){vis1_GO()});
+document.getElementById("vis1_svg2_text").addEventListener("click", function(){vis1_GO()});
+document.getElementById("vis1_svg2_text").addEventListener("mouseover", function(){
+
+    vis1_svg2_background.style("fill", "#cf8308");
+});
+document.getElementById("vis1_svg2_text").addEventListener("mouseout", function(){
+    vis1_svg2_background.style("fill", "darkorange");
+});
+document.getElementById("vis1_overlay_button_text").addEventListener("mouseover", function(){
+
+    vis1_overlay_button.style("fill", "#cf8308");
+});
+document.getElementById("vis1_overlay_button_text").addEventListener("mouseout", function(){
+    vis1_overlay_button.style("fill", "darkorange");
+});
+document.getElementById("vis1_overlay_button_text").addEventListener("click", function(){vis1_overlay()});
+var vis1_a = document.getElementById("vis1_legend_box");
+var vis1_b = document.getElementById("vis1_legend_options");
+var vis1_c = document.getElementById("vis1_replay_button");
+vis1_a.style.display="none";
+vis1_b.style.display="none";
+vis1_c.style.display="none";
+function vis1_show_legend() {
+    vis1_a.style.display="block";
+    vis1_b.style.display="block";
+    vis1_c.style.display="block";
 }
