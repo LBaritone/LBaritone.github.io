@@ -412,23 +412,34 @@ a:hover {
     border-radius: 25px;
     background: #3f4245;
     height: 35em;
-    margin-left: -20px;
-    margin-right: 20px;
+    width: 24vw;
+    text-align: center;
+/*    margin-left: -40px;
+    margin-right: 40px;*/
 }
 
 #rize_section {
     border-radius: 25px;
     background: #373a3c;
     height: 35em;
-    margin-left: -10px;
-    margin-right: 10px;
+    width: 24vw;
+    text-align: center;
+/*    margin-left: -20px;
+    margin-right: 20px;*/
 }
 
 #needle_section {
     border-radius: 25px;
     background: #3f4245;
     height: 35em;
+    width: 24vw;
+    text-align: center;
 }
+
+.big_text {
+    font-size: 2.4em;
+}
+
 
 @font-face {
     font-family: "Font Awesome";

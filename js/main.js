@@ -81,6 +81,27 @@ $(window).on("scroll.scroll1", function () {
 });
 
 
+$(document).ready(function() {
+	$(".expand").hover(
+		//on mouseover
+		function() {
+			$(this).animate({
+				width: '+=2.5vw'
+				}, 'fast' 
+			);
+		},
+		//on mouseout
+		function() {
+			$(this).animate({
+				width: '-=2.5vw',
+				}, 'fast'
+			);
+		}
+	);
+
+});
+
+
 // var vis2_svg = d3.select("#vis2").append("svg")
 //     .attr("id", "")
 //     .attr("width", $(window).width())
