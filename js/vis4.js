@@ -117,9 +117,17 @@ function createScalesAndLegend(){
         .domain(arrayforScale)
         .rangeRound([630, 660, 690, 720, 750, 780, 810, 840, 870]);
 
-    vis4color = d3.scaleThreshold()
-        .domain(arrayforScale)
-        .range(vis4colors);
+    if (vis4selectedData == "Deaths") {
+        vis4color = d3.scaleThreshold()
+            .domain(arrayforScale)
+            .range(vis4colors);
+    }
+    else {
+        vis4color = d3.scaleThreshold()
+            .domain(arrayforScale)
+            .range(vis4colorsB);
+    }
+
 
     var vis4g = vis4svg.append("g")
         .attr("class", "key")

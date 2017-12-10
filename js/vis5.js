@@ -21,7 +21,12 @@ function vis5_disp() {
 		console.log(location_pop);
 
         // append conjoining text to visualization with death rate
-        d3.selectAll(".vis5text").remove();
+        d3.selectAll(".vis5text")
+            .transition()
+                .style("opacity", 0)
+                .delay(700)
+                .ease(d3.easeLinear)
+            .remove();   
         d3.select("#vis5")
             .append("p")     
             .attr("class", "vis5text1 vis5text")
@@ -31,7 +36,7 @@ function vis5_disp() {
             })
             .transition()
                 .style("opacity", 1)
-                .delay(600)
+                .delay(1700)
                 .ease(d3.easeLinear);
         d3.select("#vis5")
             .append("p")     
@@ -42,7 +47,7 @@ function vis5_disp() {
             })
             .transition()
                 .style("opacity", 1)
-                .delay(1000)
+                .delay(1700)
                 .ease(d3.easeLinear);
         d3.select("#vis5")
             .append("p")     
@@ -54,7 +59,7 @@ function vis5_disp() {
             })
             .transition()
                 .style("opacity", 1)
-                .delay(2000)
+                .delay(2300)
                 .ease(d3.easeLinear);
         d3.select("#vis5")
             .append("p")     
@@ -67,7 +72,7 @@ function vis5_disp() {
             })
             .transition()
                 .style("opacity", 1)
-                .delay(3000)
+                .delay(3300)
                 .ease(d3.easeLinear);
 
 

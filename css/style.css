@@ -274,13 +274,14 @@ iframe {
 }
 
 #vis5 {
-    width: 660px;
-    height: 220px;
+/*    width: 660px;
+    height: 220px;*/
+    width: 45em;
+    height: 10em;
 }
 
 .vis5text {
     text-align: center;
-    margin-left: -2em;
 }
 
 .vis5text1 {
@@ -337,52 +338,20 @@ a {
 
 
 
-/* auto expand */
-
-/*#auto_expand {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.img-circle {
+    /*border-radius: 50%;*/
+    height: 200px;
+    width: 200px;
 }
 
-#auto_expand {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  background-color: #eee;
-  
-  .row {
-    flex: 1;
-    text-align: center;
-    transition: .3s;
-    max-width: 20%;
-    padding: 8em 0;
-    background-color: #ccc;
-    min-width: 10%;
+#team_title {
+    font-size: 3em;
+    padding-bottom: 1em;
+}
 
-    .row:hover{
-      transition: .5s;
-      max-width: 40% !important;
-      background: #333;
-      flex-grow: 2;
-      cursor: pointer;
-      color: #fff;
-    }
-  }
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
+.name_title {
+    font-size: 1.2em;
+}
 
 
 

@@ -12,38 +12,37 @@
     <link rel="stylesheet" href="css/vis4.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/video.css">
 
 <!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 </head>
 <body>
     <div class="container-fluid" id="fullpage">
-        <div class = "section video_section">
+        <div id = vidsection class = "section video_section">
+            <div id="overlay">
+                <div align = "center" id = vidtext1> On October 26th of 2017, President Donald J. Trump declared the opioid epidemic a public health emergency. </div>
+                <div align = "center" id = vidtext2> Click to see his full speech. </div>
+                <div align = "center" id = vidtext3> Scroll down to view the data that led him to this conclusion. </div>
+            </div>
+
             <div class = "row">
-                <h1 align="center">A World-wide Problem</h1>
-                <!--6:45-->
+                <h1 align="center">A Worldwide Problem</h1>
             </div>
             <div class = "row">
                 <div class = "col-md-12" align = "center">
-<!--                      <iframe width="1000" height="562" id="playerid"
-                        src="https://www.youtube.com/embed/UmDr_Vquc6A?start=404&autoplay=1"
-                        frameborder="0" allowfullscreen></iframe> -->
-                     <!--<iframe id="ytplayer" width="1000" height="562" id="playerid"
-                        src="https://www.youtube.com/embed/UmDr_Vquc6A?&start=404&end=407&autoplay=1"
-                        frameborder="0" allowfullscreen="true" allowscriptaccess="always"></iframe>
-                        <!-- <div id="player"></div> -->
                     <iframe id="vimeo-player"
                             src="https://player.vimeo.com/video/246623674?autoplay=0&byline=0&portrait=0#t=6m44s"
                             width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen
                             allowfullscreen></iframe>
-                    <p>Original Source: PBS NewsHour: https://www.youtube.com/watch?v=UmDr_Vquc6A</p>  </div>
+                </div>
             </div>
         </div>
 
         <div class="section vis1_section">
             <!--Pill Container Visualization-->
             <div class = "row spaced_up_vis1">
-                <h2 align = "center">How Much Of the World's Opioid's are Consumed by the US?</h2>
+                <h2 align = "center">The US Consumes The Most Opioids In the World </h2>
             </div>
             <div class = "row">
                 <div class="col-md-12">
@@ -182,10 +181,14 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
-            <div class="row">
+
+<!--             <div class="row">
                 <div class="col-md-3"></div>
                 <div id="vis5" class="col-md-6"></div>
                 <div class="col-md-3"></div>
+            </div> -->
+            <div class="row" align="center">
+                <div id="vis5" align="center"></div>
             </div>
         </div>
 
@@ -199,8 +202,8 @@
                     <div class="col-md-5"></div>
                     <div id="select1" class="col-md-2" align="center">
                         <select class="form-control" id = "dataSelect" onchange="createScalesAndLegend()">
-                            <option value="Deaths">Total Deaths</option>
                             <option value="Crude Rate">Death Rate</option>
+                            <option value="Deaths">Total Deaths</option>
                         </select>
                     </div>
                     <div class="col-md-5"></div>
@@ -216,25 +219,80 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="row">
-                        <img id="narcam_img" src="img/narcam.png" alt="Narcam">
-                        <div class="col-md-5">
-                            <p id="narcam_text"><a href="https://www.narcan.com/">Narcam</a> is the only FDA-approved nasal treatment of opioid overdose</p>
-                            <p>Narcan reverses the affects of an opioid overdose and saves lives. Currently one use of Narcan costs 140$.</p>
-                            <p>Petition your <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">senator</a> to bring the price down.</p>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>                    
+                    <img id="narcam_img" src="img/narcam.png" alt="Narcam">
+
+                    <p id="narcam_text"><a href="https://www.narcan.com/">Narcam</a> is the only FDA-approved nasal treatment of opioid overdose</p>
+                    <p>Narcan reverses the affects of an opioid overdose and saves lives. Currently one use of Narcan costs 140$.</p>
+                    <p>Petition your <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">senator</a> to bring the price down.</p>
                 </div>
                 <div class="col-md-4">
-                    
+                    <img id="narcam_img" src="img/rize.png" alt="Rize">
+
+                    <p id="narcam_text"><a href="https://rizema.org/">Rize</a> is a new nonprofit in Massachusetts hoping to raise $50 million over the next three years to battle opioid addiction in Boston.</p>
+                    <p>Join their mailing list <a href="https://rizema.org/email-signup/">here</a> or <a href="https://rizema.org/support/">donate</a>.</p>            
                 </div>
                 <div class="col-md-4">
-                    
+                    <img id="narcam_img" src="img/needle.png" alt="Rize">
+
+                    <p id="narcam_text"><a href="http://www.wbur.org/commonhealth/2017/11/14/needles-near-boston-schools">Discarded Needles</a> pose a health threat especially toward young children and pets.</p>
+                    <p>There are only <a href="http://www.bphc.org/whatwedo/Recovery-Services/services-for-active-users/Pages/Safe-Needle-and-Syringe-Disposal.aspx">9</a> needle disposal stations in Boston, and last year,  more than 20,000 littered needles were collected outside these stations. <a href="https://www.bostonglobe.com/metro/2017/08/16/pharmacies-could-collect-used-needles-under-council-proposal/wOReEj2J3QyS1IEVNFWM4J/story.html">Learn more </a>about the proposal to require pharmacies to open used needle disposal stations.</p>
                 </div>
             </div>
 
 
+        </div>
+
+        <div class="section">
+            <div id="team_title" class="row title" align="center">
+                Meet Our Team
+            </div>
+
+            <div class="container">
+                <div class="col-md-4" align="center">
+                    <img class="img-circle" src="img/juliana.jpg">
+                    <h6 class="name_title">Juliana Rogoff</h6>
+                    <p>Sophomore, Quincy House <br> <br>
+                        Juliana studies Integrative Biology with a secondary in Computer Science <br>   
+                        In her spare time she dances for Harvard's Passus Step team.
+                    </p>
+                </div>
+                <div class="col-md-4" align="center">
+                    <img class="img-circle" src="img/Lucas.jpg">
+                    <h6 class="name_title">Lucas Guzman</h6>
+                    <p>Sophomore, Lowell House <br> <br>
+                        Lucas studies Computer Science and Engineering Sciences <br>
+                        In his spare time, he works in a Physics Lab and sings in the Harvard Glee Club.
+
+                    </p>
+                </div>
+                <div class="col-md-4" align="center">
+                    <img class="img-circle" src="img/carter.jpg">
+                    <h6 class="name_title">Carter Wilcox</h6>
+                    <p>Sophomore, Winthrop House <br> <br>
+                        Carter studies History with a secondary in Computer Science <br>
+                        In his spare time, he consults for the Harvard College Consulting Group.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div id="team_title" class="row title" align="center">
+                References
+            </div>
+
+            <div class="container">
+                <div class="col-md-4" align="center">
+
+                </div>
+                <div class="col-md-4" align="center">
+
+                </div>
+                <div class="col-md-4" align="center">
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -252,7 +310,138 @@
     <script src="js/jquery.fullPage.js "></script>
     <!--<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>-->
     <script src="https://player.vimeo.com/api/player.js"></script>
-    <script src="js/fullpageAndVideo.js" ></script>
+    <script>
+        $(document).ready(function() {
+
+
+            $('#fullpage').fullpage({
+                menu: '#menu',
+                lockAnchors: false,
+                // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ["Trump's Speech", 'Worldwide Comsumption',
+                    'Deaths in 2016', 'Deaths On the Rise', 'Death in Your Community', 'Map', 'Help'],
+                showActiveTooltip: false,
+                slidesNavigation: false,
+                slidesNavPosition: 'bottom',
+
+                scrollBar:true,
+                // autoScrolling:false
+
+
+                // automatic scroll
+                afterRender: function() {}
+            });
+
+            //play and pause of beginning youtube video
+            var iframe = document.querySelector('iframe');
+            var player = new Vimeo.Player(iframe);
+
+
+            var clicked = false;
+            player.on('timeupdate', function(data) {
+                if (data["seconds"] >= 405.700 && !clicked) {
+                    clicked = true;
+
+                    var currentvolume = 1;
+                    downsizeVolume(currentvolume);
+
+                    function downsizeVolume(currentvolume){
+                        console.log(currentvolume);
+                        currentvolume -= 0.1;
+
+                        if (currentvolume <= 0) {
+                            player.pause().then(function() {
+                                // the video was paused
+                            }).catch(function(error) {
+                                switch (error.name) {
+                                    case 'PasswordError':
+                                        // the video is password-protected and the viewer needs to enter the
+                                        // password first
+                                        break;
+
+                                    case 'PrivacyError':
+                                        // the video is private
+                                        break;
+
+                                    default:
+                                        // some other error occurred
+                                        break;
+                                }
+                            });
+                            //ADD SVG OVERLAY
+                            on();
+                            $('#overlay').css('visibility', 'visible').hide().fadeIn(250);
+                            setTimeout(function () {
+                                $('#vidtext1').css('visibility', 'visible').hide().fadeIn(400);
+                            }, 250);
+                            setTimeout(function () {
+                                $('#vidtext2').css('visibility', 'visible').hide().fadeIn(250);
+                            }, 3000);
+                            // setTimeout(function () {
+                            //     $('#vidtext3').css('visibility', 'visible').hide().fadeIn(250);
+                            // }, 5000);
+                            setTimeout(function () {
+
+                                $('#vidtext3').css('visibility', 'visible').hide().fadeIn(250);
+
+                            }, 5000);
+
+                            //
+                        }
+                        else {
+                            setTimeout(function () {
+                                player.setVolume(currentvolume);
+                                downsizeVolume(currentvolume);
+                            }, 100);
+                        }
+                    }
+                }
+
+                //make overlay disappear on click
+                $("#overlay").click(function(){
+                    $('#overlay').fadeOut(500);
+                    setTimeout(function () {
+                        off();
+                        player.setVolume(1);
+                        player.play().then(function() {
+                            // the video was played
+                        }).catch(function(error) {
+                            switch (error.name) {
+                                case 'PasswordError':
+                                    // the video is password-protected and the viewer needs to enter the
+                                    // password first
+                                    break;
+
+                                case 'PrivacyError':
+                                    // the video is private
+                                    break;
+
+                                default:
+                                    // some other error occurred
+                                    break;
+                            }
+                        });
+                    }, 500);
+                });
+            });
+
+
+        });
+
+
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("overlay").remove();
+        }
+    </script>
+
+
 
     <!-- Load Our JS files -->
     <script src="js/vis2.js"></script>
