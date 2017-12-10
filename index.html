@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="container-fluid" id="fullpage">
-        <div id = vidsection class = "section video_section">
+        <div id = "vidsection" class = "section video_section">
             <div id="overlay">
                 <div align = "center" id = vidtext1> On October 26th of 2017, President Donald J. Trump declared the opioid epidemic a public health emergency. </div>
                 <div align = "center" id = vidtext2> Click to see his full speech. </div>
@@ -391,23 +391,32 @@
                             });
                             //ADD SVG OVERLAY
                             on();
-                            $('#overlay').css('visibility', 'visible').hide().fadeIn(250);
-                            setTimeout(function () {
-                                $('#vidtext1').css('visibility', 'visible').hide().fadeIn(400);
-                            }, 250);
-                            setTimeout(function () {
-                                $('#vidtext2').css('visibility', 'visible').hide().fadeIn(250);
-                            }, 3000);
-                            // setTimeout(function () {
-                            //     $('#vidtext3').css('visibility', 'visible').hide().fadeIn(250);
-                            // }, 5000);
-                            setTimeout(function () {
 
-                                $('#vidtext3').css('visibility', 'visible').hide().fadeIn(250);
+                            var window_top = $(window).scrollTop();
+                            var window_bottom = $(window).scrollTop() + $(window).height();
+                            var window_middle = (window_top + window_bottom) / 2.0;
 
-                            }, 5000);
+                            var target_top = $(".video_section").position().top;
+                            var target_bottom = $(".video_section").position().top + $(window).height();
 
-                            //
+                            if(window_middle > target_top && window_middle < target_bottom) {
+                                $('#overlay').css('visibility', 'visible').hide().fadeIn(250);
+                                setTimeout(function () {
+                                    $('#vidtext1').css('visibility', 'visible').hide().fadeIn(400);
+                                }, 250);
+                                setTimeout(function () {
+                                    $('#vidtext2').css('visibility', 'visible').hide().fadeIn(250);
+                                }, 3000);
+                                // setTimeout(function () {
+                                //     $('#vidtext3').css('visibility', 'visible').hide().fadeIn(250);
+                                // }, 5000);
+                                setTimeout(function () {
+
+                                    $('#vidtext3').css('visibility', 'visible').hide().fadeIn(250);
+
+                                }, 5000);
+                            }
+
                         }
                         else {
                             setTimeout(function () {
@@ -445,13 +454,6 @@
                     }, 500);
                 });
             });
-
-            $(window).on("scroll.scroll2", function () { 
-                $('#overlay').fadeOut(500);
-
-                $(this).off('scroll.scroll2'); 
-            });
-
         });
 
 
@@ -463,6 +465,12 @@
             document.getElementById("overlay").style.display = "none";
             document.getElementById("overlay").remove();
         }
+
+
+        $(window).on("scroll.scroll2", function () { 
+            $('#overlay').fadeOut(500);
+            $(this).off('scroll.scroll2'); 
+        });
     </script>
 
 
