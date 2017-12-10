@@ -109,7 +109,6 @@ $(window).on("scroll.scroll1", function () {
 	}
 });
 
-
 		// function wait(){
 		// 	if (window_middle > target_top && window_bottom < target_bottom){
 		// 		setTimeout(wait, 100);

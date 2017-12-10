@@ -23,9 +23,12 @@
     <div class="container-fluid" id="fullpage">
         <div id = "vidsection" class = "section video_section">
             <div id="overlay">
-                <div align = "center" id = vidtext1> On October 26th of 2017, President Donald J. Trump declared the opioid epidemic a public health emergency. </div>
+                <div align = "center" id = vidtext1> On October 26th 2017, President Donald J. Trump declared the opioid epidemic a public health emergency. </div>
                 <div align = "center" id = vidtext2> Click to see his full speech. </div>
-                <div align = "center" id = vidtext3> Scroll down to view the data that led him to this conclusion. </div>
+                <div align = "center" id = vidtext3> Scroll down to view the data that led him to this conclusion. 
+                    <br>
+                    <i id="#moveDown" class="fa fa-angle-down" style="font-size: 4.5em;" aria-hidden="true"></i>
+                </div>
             </div>
 
             <div class = "row">
@@ -302,6 +305,7 @@
                       <li><a href="https://www.flaticon.com/free-icon/revolver_620795#term=gun&page=1&position=2">Gun Icon</a></li>
                       <li><a href="https://thenounproject.com/term/pill-bottle/12720/">Pill Bottle Icon</a></li>
                       <li><a href="https://thenounproject.com/term/pill-bottle/20465/">Favicon</a></li>
+                      <li><a href="https://icons8.com/icon/39942/expand-arrow">Down Arrow</a></li>
                     </ul>  
                 </div>
                 <div class="col-md-4">
@@ -470,6 +474,10 @@
         $(window).on("scroll.scroll2", function () { 
             $('#overlay').fadeOut(500);
             $(this).off('scroll.scroll2'); 
+        });
+
+        $(document).on('click', '#moveDown', function(){
+            $.fn.fullpage.moveSectionDown();
         });
     </script>
 
