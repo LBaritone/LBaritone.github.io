@@ -324,6 +324,7 @@ a {
 
 a:hover {
     color:  #c83e12;
+    cursor: pointer;
 }
 
 #narcam_text {
@@ -398,6 +399,36 @@ a:hover {
     animation-timing-function: linear;
 }
 
+#help_section_title {
+    margin-bottom: 2em;
+}
+
+.help_title {
+    font-size: 2em;
+    text-align: center;
+}
+
+#narcam_section {
+    border-radius: 25px;
+    background: #3f4245;
+    height: 35em;
+    margin-left: -20px;
+    margin-right: 20px;
+}
+
+#rize_section {
+    border-radius: 25px;
+    background: #373a3c;
+    height: 35em;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+#needle_section {
+    border-radius: 25px;
+    background: #3f4245;
+    height: 35em;
+}
 
 @font-face {
     font-family: "Font Awesome";
