@@ -55,7 +55,7 @@ p{
 /***STYLES FOR BUTTONS***/
 /***W3Schools Button Styling**/
 .button {
-    background-color: darkorange; /* Green */
+    background-color:   #DF4515; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -274,7 +274,8 @@ iframe {
 }
 
 #zip_button {
-    background-color: #a81a24; 
+    /*background-color: #a81a24; */
+    background-color:   #DF4515;
 }
 
 #vis5 {
@@ -310,7 +311,12 @@ iframe {
 }
 
 a {
-    color: #a81a24;
+    /*color: #a81a24;*/
+    color:  #DF4515;
+}
+
+a:hover {
+    color:  #c83e12;
 }
 
 #narcam_text {
@@ -323,7 +329,7 @@ a {
 }
 
 .vis3_button {
-    background-color: darkorange;
+    background-color:   #DF4515;
     width: 19vw;
     height: 50px;
     font-size: 1.3em;
@@ -337,10 +343,13 @@ a {
 .vis3_button:active:hover, 
 .vis3_button.active:hover,  
 .vis3_button:visited {
-    background-color: #ea8000;
+    background-color: #c83e12;
+    cursor: pointer;
 }
 
-
+.circle {
+    cursor: pointer;
+}
 
 .img-circle {
     /*border-radius: 50%;*/
@@ -355,6 +364,12 @@ a {
 
 .name_title {
     font-size: 1.2em;
+}
+
+.ref_title {
+    font-size: 1.3em;
+    color: whitesmoke;
+    padding-left: 2em;
 }
 
 

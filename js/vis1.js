@@ -1003,7 +1003,7 @@ var vis1_overlay_button = vis1_svg.append("rect")
     .attr("id", "vis1_overlay_button")
     .attr("rx", 4)
     .attr("ry", 4)
-    .attr("fill", "darkorange");
+    .attr("fill", "#DF4515");
 vis1_svg.append("text")
     .attr("x", 514)
     .attr("y", 208)
@@ -1030,7 +1030,7 @@ var vis1_svg2_background = vis1_svg2.append("rect")
     .attr("class", "vis1_overlay_button")
     .attr("rx", 4)
     .attr("ry", 4)
-    .attr("fill", "darkorange");
+    .attr("fill", "#DF4515");
 var vis1_svg2_text = vis1_svg2.append("text")
     .attr("x", 50)
     .attr("y", 33)
@@ -1052,17 +1052,17 @@ document.getElementById("vis1_svg2_background").addEventListener("click", functi
 document.getElementById("vis1_svg2_text").addEventListener("click", function(){vis1_GO()});
 document.getElementById("vis1_svg2_text").addEventListener("mouseover", function(){
 
-    vis1_svg2_background.style("fill", "#cf8308");
+    vis1_svg2_background.style("fill", "#c83e12");
 });
 document.getElementById("vis1_svg2_text").addEventListener("mouseout", function(){
-    vis1_svg2_background.style("fill", "darkorange");
+    vis1_svg2_background.style("fill", "#DF4515");
 });
 document.getElementById("vis1_overlay_button_text").addEventListener("mouseover", function(){
 
-    vis1_overlay_button.style("fill", "#cf8308");
+    vis1_overlay_button.style("fill", "#c83e12");
 });
 document.getElementById("vis1_overlay_button_text").addEventListener("mouseout", function(){
-    vis1_overlay_button.style("fill", "darkorange");
+    vis1_overlay_button.style("fill", "#DF4515");
 });
 document.getElementById("vis1_overlay_button_text").addEventListener("click", function(){vis1_overlay()});
 var vis1_a = document.getElementById("vis1_legend_box");
