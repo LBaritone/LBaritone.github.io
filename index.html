@@ -446,6 +446,11 @@
                 });
             });
 
+            $(window).on("scroll.scroll2", function () { 
+                $('#overlay').fadeOut(500);
+
+                $(this).off('scroll.scroll2'); 
+            });
 
         });
 

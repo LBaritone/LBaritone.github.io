@@ -24,7 +24,7 @@ path.line
 	font-family:"avenir next", Arial, sans-serif;
 	padding: 6px;
 	background: rgba(0, 0, 0, 0.6);
-	color: #FFA500;
+	color: #DF4515;
 	border-radius: 1px;
 	pointer-events: none;
 }
@@ -34,5 +34,5 @@ path.line
 }
 
 strong {
-	color: #FFA500;
+	color: #DF4515;
 }
