@@ -71,7 +71,7 @@ function vis5_disp() {
             })
             .transition()
                 .style("opacity", 1)
-                .delay(2300)
+                .delay(3000)
                 .ease(d3.easeLinear);
 
         d3.select("#vis5")
@@ -81,7 +81,7 @@ function vis5_disp() {
             .text("Scroll down to explore the rest of the country.")
             .transition()
                 .style("opacity", 1)
-                .delay(3300)
+                .delay(3900)
                 .ease(d3.easeLinear);
 
 

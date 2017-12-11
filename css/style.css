@@ -308,20 +308,21 @@ iframe {
 }
 
 .vis5text1 {
-    color: #93adbf;
+    color: #e87c5b;
     font-size: 45px;
 }
 
 .vis5text2 {
-    font-size: 20px;
+    font-size: 28px;
 }
 
 .vis5text3 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .vis5text4 {
-    font-size: 25px;
+    padding-top: 14vh;
+    font-size: 15px;
 }
 
 #narcam_img {
