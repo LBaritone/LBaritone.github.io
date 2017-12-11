@@ -27,6 +27,7 @@ body{
 
 #title_embellishment {
     text-shadow: 2px 2px #727578;
+    margin-top: -3vw;
     margin-left: -1.5em;
     margin-bottom: 4vh;
     border-radius: 30px;
