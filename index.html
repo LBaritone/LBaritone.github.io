@@ -372,8 +372,12 @@
     <!--<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>-->
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script>
-        $(document).ready(function() {
 
+         //play and pause of beginning youtube video
+         var iframe = document.querySelector('iframe');
+         var player = new Vimeo.Player(iframe);
+
+        $(document).ready(function() {
 
             $('#fullpage').fullpage({
                 menu: '#menu',
@@ -394,10 +398,6 @@
                 // automatic scroll
                 afterRender: function() {}
             });
-
-            //play and pause of beginning youtube video
-            var iframe = document.querySelector('iframe');
-            var player = new Vimeo.Player(iframe);
 
 
             var clicked = false;
