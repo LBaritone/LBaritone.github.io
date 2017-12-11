@@ -46,9 +46,9 @@ $(window).on("scroll.scroll1", function () {
 	var target_bottom = $(".vis2_section").position().top + $(window).height();
 
 
-	console.log("middle: " + window_middle);
-	console.log("top: " + target_top);
-	console.log("bottom: " + target_bottom);
+	// console.log("middle: " + window_middle);
+	// console.log("top: " + target_top);
+	// console.log("bottom: " + target_bottom);
 
 	if(window_middle > target_top && window_middle < target_bottom) {
 		$('#vis2_title').fadeOut(4000);
