@@ -510,6 +510,7 @@
 
 
         $(window).on("scroll.scroll2", function () { 
+            console.log("scroll event");
             $('#overlay').fadeOut(500);
             $(this).off('scroll.scroll2'); 
         });
