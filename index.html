@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/video.css">
     <link rel='icon' type='image/x-icon' href='favicon.ico' />
-    <!-- <link rel="icon" type="image/png" href="images/pills.png"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 
 <!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
@@ -32,7 +32,7 @@
             </div>
 
             <div class = "row">
-                <h1 align="center">A Worldwide Problem</h1>
+                <h1 id="title_embellishment" align="center">A Worldwide Problem</h1>
             </div>
             <div class = "row">
                 <div class = "col-md-12" align = "center">
@@ -88,14 +88,14 @@
         <!--GUNS, CARS, DRUGS, AND PEOPLE VISUALIZATION -->
         <div class="section vis2_section">
             <div class="row">
-                <h2 id="vis2_title" align="center">Within the US, Opioids are a Leading Killer</h2>
+                <h2 id="vis2_title" align="center">So how big is this problem?</h2>
             </div>
             <div class="row">
                 <div class="col-md-5" style="height:100vh;">
                     <div class="row" style="height:40vh;">
                         <div class="col-md-12">
                             <div class = "row top_row_gun">
-                                <div id="gun_text" align="center" class="title">Gun homicides killed <span class="lined"> <span class="red">13,000</span> people in 2016 </span></div>
+                                <div id="gun_text" align="center" class="title">Gun homicides killed <span class="lined"> <span class="red red1">13,000</span> people in 2016 </span></div>
                             </div>
 
                             <div class="row row_bellow">
@@ -111,7 +111,7 @@
                     <div id="car_row" class="row" style="height:60vh;">
                         <div class="col-md-12">
                             <div class = "row top_row_car">
-                                <div id="car_text" align="center" class="title">Car crashes killed <span class="lined"> <span class="red">38,000</span> people in 2016 </span></div>
+                                <div id="car_text" align="center" class="title">Car crashes killed <span class="lined"> <span class="red red2">38,000</span> people in 2016 </span></div>
                             </div>
 
                             <div class="row row_bellow">
@@ -127,7 +127,7 @@
                 </div>
                 <div id="drug_row" class="col-md-7" style="height:100vh">
                     <div class = "row top_row big_row">
-                        <div id="drug_text" align="center" class="title">Drug overdose is the leading cause of accidental <span class="lined">death in the US, killling <span class="red">52,404</span> people in 2016 </span></div>
+                        <div id="drug_text" align="center" class="title">Drug overdose is the leading cause of accidental <span class="lined">death in the US, killling <span class="red red3">52,404</span> people in 2016 </span></div>
                     </div>
 
                     <div class="row row_bellow">
@@ -204,15 +204,19 @@
             <!--Choropleth map of Opiod Dealths-->
             <div class = "row">
                 <h2 id="space_up" align="center">Your County in Context</h2>
-                <h3 id="toggle_text" align="center">Toggle between Deaths and see Death Rate between (1999 and 2015).</h3>
+                
                 <!--Select Box for choosing data-->
                 <div class="row">
-                    <div class="col-md-5"></div>
-                    <div id="select1" class="col-md-2" align="center">
-                        <select class="form-control" id = "dataSelect" onchange="createScalesAndLegend()">
-                            <option value="Crude Rate">Death Rate</option>
-                            <option value="Deaths">Total Deaths</option>
-                        </select>
+                    <div class="col-md-8">
+                        <h3 id="toggle_text" align="center">Toggle between Deaths and Crude Rate (1999 and 2015).</h3>
+                    </div>
+                    <div id="select1" class="col-md-4" align="center">
+                        <div style = "padding-top: 10px" align = "center">
+                            <select align = "center" class="form-control" id = "dataSelect" onchange="createScalesAndLegend()">
+                                <option value="Crude Rate">Crude Rate</option>
+                                <option value="Deaths">Total Deaths</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-md-5"></div>
                 </div>
@@ -227,7 +231,7 @@
             </div>
             <div class="row">
                 <div class="container">
-                    <div class="col-md-4">
+                    <div class="col-md-4 flip">
                         <div id="narcam_section" class="expand">
                             <!-- <img id="narcam_img" src="img/narcam.png" alt="Narcam"> -->
                             <div class="help_title"><a href="https://www.narcan.com/">Narcan</a></div>
@@ -239,22 +243,28 @@
                             <br>
                             <p>Petition your <a href="https://www.senate.gov/general/contact_information/senators_cfm.cfm">senator</a> to bring the price down.</p>
                         </div>
+                        <div class="flipper">
+                            <div class="middle">Save Lives</div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 flip">
                         <div id="rize_section" class="expand">
                             <!-- <img id="narcam_img" src="img/rize.png" alt="Rize"> -->
                             <div class="help_title"><a href="https://rizema.org/">Rize</a></div>
 
                             <br>
                             <p id="narcam_text">A new nonprofit in Massachusetts</p>
-                            <br> <br>
-                            <p>Since 2013, Massachusetts has seen a 60% increase in Opioid Overdose Deaths. Rize hopes to rase</p>
+                            <br> 
+                            <p>Since 2013, Massachusetts has seen a 60% increase in Opioid Overdose Deaths. Rize hopes to raise</p>
                             <br>
                             <p> <span class="big_text">$50 million</span> <br> <br> <br> over the next three years to battle opioid addiction in Boston.</p>
                             <p>Join their mailing list <a href="https://rizema.org/email-signup/">here</a> or <a href="https://rizema.org/support/">donate</a>.</p>
-                        </div>        
+                        </div>  
+                        <div class="flipper">
+                            <div class="middle">Join the Movement</div>
+                        </div>      
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 flip">
                         <div id="needle_section" class="expand">
                             <!-- <img id="narcam_img" src="img/needle.png" alt="Rize"> -->
                             <div class="help_title"><a href="http://www.wbur.org/commonhealth/2017/11/14/needles-near-boston-schools">Discarded Needles</a></div>
@@ -262,7 +272,10 @@
                             <br>
                             <p id="narcam_text"> Pose a health threat especially toward young children and pets.</p>
                             <br> 
-                            <p>There are only <a href="http://www.bphc.org/whatwedo/Recovery-Services/services-for-active-users/Pages/Safe-Needle-and-Syringe-Disposal.aspx">9</a> needle disposal stations in Boston, and last year,  more than <br> <br> <br> <span class="big_text">20,000</span> <br> <br> <br> littered needles were collected outside these stations. <a href="https://www.bostonglobe.com/metro/2017/08/16/pharmacies-could-collect-used-needles-under-council-proposal/wOReEj2J3QyS1IEVNFWM4J/story.html">Learn more </a>about the proposal to require pharmacies to open used needle disposal stations.</p>
+                            <p>Boston has only <a href="http://www.bphc.org/whatwedo/Recovery-Services/services-for-active-users/Pages/Safe-Needle-and-Syringe-Disposal.aspx">9</a> needle disposal stations. Last year,  more than <br> <br> <br> <span class="big_text">20,000</span> <br> <br> <br> littered needles were collected outside these stations. <a href="https://www.bostonglobe.com/metro/2017/08/16/pharmacies-could-collect-used-needles-under-council-proposal/wOReEj2J3QyS1IEVNFWM4J/story.html">Learn more </a>about the proposal to require pharmacies to open used needle disposal stations.</p>
+                        </div>
+                        <div class="flipper">
+                            <div class="middle">Discard Needles</div>
                         </div>
                     </div>
                 </div>

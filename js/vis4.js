@@ -49,10 +49,10 @@ var vis4tooltip = d3.tip()
                 //check that the data for this county is not equal to N/A (supressed or unavaible), print if true
                 if (isNaN(element[vis4selectedData])){
                     if (element[vis4selectedData] == "Suppressed") {
-                        valueToDisplay = "Data is " + element[vis4selectedData];
+                        valueToDisplay = element[vis4selectedData];
                     }
                     else {
-                        valueToDisplay = "Data is " + element[vis4selectedData];
+                        valueToDisplay = element[vis4selectedData];
                     }
                     countyName = element.County;
                 }
@@ -81,12 +81,32 @@ function ready(vis4error, vis4usaMapData, vis4deathsData) {
     vis4displayData = vis4deathsData;
 
     vis4displayData.forEach(function(d){
-        if (d["Crude Rate"] != "Suppressed" && d["Crude Rate"] != "Unreliable") {
+        // if (d["Crude Rate"] != "Suppressed" && d["Crude Rate"] != "Unreliable") {
+        //     d["Crude Rate"] = +d["Crude Rate"];
+        // }
+        // if (d["Deaths"] != "Suppressed" && d["Deaths"] != "Unreliable") {
+        //     d["Deaths"] = +d["Deaths"];
+        // }
+        if (d["Crude Rate"] == "Suppressed"){
+            d["Crude Rate"] = "Data Suppressed (< 10 Deaths)";
+        }
+        else if (d["Crude Rate"] == "Unreliable") {
+            d["Crude Rate"] = "Data Unreliable (< 20 Deaths)";
+        }
+        else {
             d["Crude Rate"] = +d["Crude Rate"];
         }
-        if (d["Deaths"] != "Suppressed" && d["Deaths"] != "Unreliable") {
+
+        if (d["Deaths"] == "Suppressed"){
+            d["Deaths"] = "Data Suppressed (< 10 Deaths)";
+        }
+        else {
             d["Deaths"] = +d["Deaths"];
         }
+
+
+
+
 
     });
 
@@ -169,6 +189,7 @@ function createScalesAndLegend(){
         .select(".domain")
         .remove();
 
+
     updateVisualization();
 
 }
@@ -221,6 +242,17 @@ function updateVisualization() {
         .datum(topojson.mesh(vis4us, vis4us.objects.states, function(a, b) { return a !== b; }))
         .attr("class", "states")
         .attr("d", vis4path);
+
+    var vis4g2 = vis4svg.append("g")
+        .attr("class", "info")
+        .attr("transform", "translate(560,580)");
+    
+    vis4g2.append("text")
+        .attr("class", "infocaption")
+        .attr("fill", "#fff")
+        .attr("text-anchor", "start")
+        .attr("font-weight", "bold")
+        .text("*Crude Rate = Death Count/Population*100,000");
 }
 
 
