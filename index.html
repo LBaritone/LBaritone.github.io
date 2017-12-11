@@ -511,6 +511,7 @@
 
         $(window).on("scroll.scroll2", function () { 
             console.log("scroll event");
+            player.setVolume(1);
             $('#overlay').fadeOut(500);
             setTimeout(function () {
                 off();
