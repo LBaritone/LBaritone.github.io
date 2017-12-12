@@ -2,20 +2,32 @@
 CS171 Project
 
 
-\section{Our Coding files}
-	\begin{list_type}  
-		\item  
-		\item 
-		\item  \ldots 
-	\end{list_type}
-	
-	
-	\begin{enumerate}
-		\item The first item
-		\begin{enumerate}
-			\item Nested item 1
-			\item Nested item 2
-		\end{enumerate}
-		\item The second item
-		\item The third etc \ldots
-	\end{enumerate}
+Our Coding files
+	Javascript
+		main.js
+		vis1.js
+		vis2.js
+		vis3.js
+		vis4.js
+		vis5.js
+		
+		
+		
+		
+Libraries 
+	Javascript
+		d3-legend.js
+		d3-legend.min.js
+		d3-tip.js
+		d3.js
+		d3.min.js
+		fullpageAndVideo.js
+		javascript.fullPage.min.js
+		jquery.fullPage.js
+		jquery.min.js
+		jquery.min.map
+		queue.js
+		queue.min.js
+		topojson.js
+		
+		
