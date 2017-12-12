@@ -2536,33 +2536,33 @@
   "China": [
     {
       "Year": 1980,
-      "Methadone": "N/A",
-      "Morphine": "N/A",
+      "Methadone": "13.58",
+      "Morphine": "0",
       "Pethidine": "N/A",
       "Oxycodone": "N/A",
-      "Fentanyl": "N/A",
+      "Fentanyl": "0",
       "Hydromorphone": "N/A",
-      "Total": "N/A"
+      "Total": "13.58"
     },
     {
       "Year": 1981,
-      "Methadone": "N/A",
-      "Morphine": "N/A",
-      "Pethidine": "N/A",
+      "Methadone": "14.70",
+      "Morphine": "3.87",
+      "Pethidine": "200.13",
       "Oxycodone": "N/A",
-      "Fentanyl": "N/A",
+      "Fentanyl": "0",
       "Hydromorphone": "N/A",
-      "Total": "N/A"
+      "Total": "218.7"
     },
     {
       "Year": 1982,
-      "Methadone": "N/A",
-      "Morphine": "N/A",
-      "Pethidine": "N/A",
+      "Methadone": "14.28",
+      "Morphine": "3.03",
+      "Pethidine": "214.44",
       "Oxycodone": "N/A",
-      "Fentanyl": "N/A",
+      "Fentanyl": "5.54",
       "Hydromorphone": "N/A",
-      "Total": "N/A"
+      "Total": "237.29"
     },
     {
       "Year": 1983,
@@ -2637,12 +2637,12 @@
     {
       "Year": 1990,
       "Methadone": "N/A",
-      "Morphine": "N/A",
-      "Pethidine": "N/A",
+      "Morphine": "22.16",
+      "Pethidine": "731.33",
       "Oxycodone": "N/A",
-      "Fentanyl": "N/A",
+      "Fentanyl": "132.01",
       "Hydromorphone": "N/A",
-      "Total": "N/A"
+      "Total": "885.5"
     },
     {
       "Year": 1991,
