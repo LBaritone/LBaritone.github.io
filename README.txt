@@ -39,6 +39,7 @@ Screencast Video: https://youtu.be/gRCnA3KFf1s
 Non-obvious Features:
 	For the line graph, a tooltip appears when the cursor hovers over the dots
 
-	In the Do Your Part to Save Lives section, the text in orange signifies clickable 	links that will link you to another website. This also goes for the references 		section.
+	In the Do Your Part to Save Lives section, the text in orange signifies 
+	clickable links that will link you to another website. This also goes for the 		references section.
 
 	
