@@ -1,6 +1,8 @@
 # LBaritone.github.io
 CS171 Project
 
+Project Website: https://lbaritone.github.io/
+Screencast Video: https://youtu.be/gRCnA3KFf1s
 
 Our Coding files
 	Javascript
@@ -10,10 +12,7 @@ Our Coding files
 		vis3.js
 		vis4.js
 		vis5.js
-		
-		
-		
-		
+			
 Libraries 
 	Javascript
 		d3-legend.js
@@ -30,12 +29,6 @@ Libraries
 		queue.min.js
 		topojson.js
 		
-		
-
-Project Website: https://lbaritone.github.io/
-Screencast Video: https://youtu.be/gRCnA3KFf1s
-
-
 Non-obvious Features:
 	For the line graph, a tooltip appears when the cursor hovers over the dots
 
