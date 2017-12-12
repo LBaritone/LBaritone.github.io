@@ -4,7 +4,7 @@ CS171 Project
 Project Website: https://lbaritone.github.io/
 Screencast Video: https://youtu.be/gRCnA3KFf1s
 
-Our Coding files
+Our Coding files:
 	Javascript
 		main.js
 		vis1.js
@@ -13,7 +13,7 @@ Our Coding files
 		vis4.js
 		vis5.js
 			
-Libraries 
+Libraries:
 	Javascript
 		d3-legend.js
 		d3-legend.min.js
