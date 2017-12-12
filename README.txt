@@ -4,6 +4,9 @@ CS171 Project
 Project Website: https://lbaritone.github.io/
 Screencast Video: https://youtu.be/gRCnA3KFf1s
 
+Data:
+	All data included in implementation/LBaritone.github.io/data folder
+
 Our Coding files:
 	Javascript:
 		main.js
@@ -12,6 +15,10 @@ Our Coding files:
 		vis3.js
 		vis4.js
 		vis5.js
+		fullpageAndVideo.js
+		colorbrewer2.js
+		script in index.html (library requires initialization in index.html)
+
 	CSS:	
 		styles.css
 		video.css
@@ -22,12 +29,12 @@ Our Coding files:
 			
 Libraries:
 	Javascript
+		bootstrap.min.js
 		d3-legend.js
 		d3-legend.min.js
 		d3-tip.js
 		d3.js
 		d3.min.js
-		fullpageAndVideo.js
 		javascript.fullPage.min.js
 		jquery.fullPage.js
 		jquery.min.js
