@@ -5,13 +5,20 @@ Project Website: https://lbaritone.github.io/
 Screencast Video: https://youtu.be/gRCnA3KFf1s
 
 Our Coding files:
-	Javascript
+	Javascript:
 		main.js
 		vis1.js
 		vis2.js
 		vis3.js
 		vis4.js
 		vis5.js
+	CSS:	
+		styles.css
+		video.css
+		vis1.css
+		vis2.css
+		vis3.css
+		vis4.css
 			
 Libraries:
 	Javascript
@@ -28,7 +35,18 @@ Libraries:
 		queue.js
 		queue.min.js
 		topojson.js
+	CSS:	
+		bootstrap.min.css
+		font-awesome.min.css
+		javascript.fullPage.css
+		jquery.fullPage.css
+		jquery.fullPage.min.css
+	Fonts:
+		font-awesome-4.7.0
+	Other: 
+		fullPage.js-master
 		
+
 Non-obvious Features:
 	For the line graph, a tooltip appears when the cursor hovers over the dots
 
